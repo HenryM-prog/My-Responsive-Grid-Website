@@ -1,0 +1,94 @@
+/* CSS Variables */
+
+:root {
+    --primary: #FFF;
+    --dark: #333;
+    --light: #FFF;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;    
+    color: var(--dark);
+}
+
+body {
+    line-height: 1.4;
+    margin: 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+}
+
+
+
+
+
+/* Top Container */
+.top-container {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-areas: 
+    'first-col second-col'
+
+}
+
+.first-col {
+    grid-area: first-col;
+    background: url(/img/Img1P.jpg);
+    background-size: cover;
+    min-height: 600px;
+    color: #FFF;
+    padding: 1rem;
+  
+}
+
+.second-col {
+    grid-area: second-col;
+    background: var(--dark);
+    background-size: cover;
+    min-height: 600px;
+    
+}
+
+/* Media Queries */
+@media(max-width: 720px) {
+    .top-container {
+        grid-template-areas: 
+        'first-col first-col'
+        'second-col second-col';
+    }
+
+    .top-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    .info .btn {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+@media(max-width: 500px) {
+    .top-container {
+        grid-template-areas: 
+        'first-col'
+        'second-col';
+    }
+}
