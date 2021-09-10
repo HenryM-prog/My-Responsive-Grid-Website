@@ -8,7 +8,7 @@
 }
 
 html {
-    box-sizing: border-box;
+   box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;    
     color: var(--dark);
 }
@@ -19,7 +19,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .wrapper {
@@ -34,7 +34,9 @@ img {
 /* Top Container */
 .top-container {
     display: grid;
+    height: 50vh;
     grid-gap: 0px;
+    border: solid 1px white;
     grid-template-areas: 
     'first-col second-col'
 
@@ -42,12 +44,16 @@ img {
 
 .first-col {
     grid-area: first-col;
-    background: url(/img/Img1P.jpg);
+    background: var(--dark);
     background-size: cover;
     min-height: 600px;
     color: #FFF;
     padding: 1rem;
-  
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
 }
 
 .second-col {
@@ -55,7 +61,11 @@ img {
     background: var(--dark);
     background-size: cover;
     min-height: 600px;
-    
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    border-left: solid white 1px;
 }
 
 /* Media Queries */
